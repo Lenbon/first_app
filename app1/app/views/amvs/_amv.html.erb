@@ -1,0 +1,7 @@
+<div>
+	<h2><%= amv.title %></h2>
+	<iframe width="560" height="315" src="<%= amv.link %>" frameborder="0" allowfullscreen></iframe>
+	<div>
+		<%= link_to 'Edit', edit_amv_path(amv) %> <%= link_to 'Destroy', amv_path(amv),method: :delete, data: { confirm: 'Are you sure?' } %>
+	</div>
+<div>

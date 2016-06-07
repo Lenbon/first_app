@@ -1,0 +1,23 @@
+<div class="title">
+	<h1>Ani-Desu</h1>
+</div>
+<div class="menu">
+	<ul>
+		<li>Strona Glowna</li>
+		<li>Anime</li>
+		<li>AMV</li>
+		<li>Manga</li>
+		<li><%= link_to 'Wiadomosci', controller: 'articles' %></li>
+	</ul>
+</div>
+<div class="tresc">
+	<h1>Wiadomosci</h1>
+	<div><%= link_to 'New article', new_article_path %></div>
+	<% @articles.each do |article| %>
+		<h2><%= article.title %></h2>
+		<center><img class="article_img" src="<%= article.img_name %>" alt="img"/></center>
+		<div>
+			<%= link_to 'Show', article_path(article) %> <%= link_to 'Edit', edit_article_path(article) %> <%= link_to 'Destroy', article_path(article),method: :delete,data: { confirm: 'Are you sure?' } %>
+		</div>
+	<% end %>
+</div>

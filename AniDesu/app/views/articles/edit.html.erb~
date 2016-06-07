@@ -1,0 +1,19 @@
+<div class="title">
+	<h1>Ani-Desu</h1>
+</div>
+<div class="menu">
+	<ul>
+		<li>Strona Glowna</li>
+		<li>Anime</li>
+		<li>AMV</li>
+		<li>Manga</li>
+		<li><%= link_to 'Wiadomosci', controller: 'articles' %></li>
+	</ul>
+</div>
+<div class="tresc">
+	<h1>Edycja wiadomosci</h1>
+ 
+	<%= render 'form' %>
+ 
+	<%= link_to 'Back', articles_path %>
+</div>

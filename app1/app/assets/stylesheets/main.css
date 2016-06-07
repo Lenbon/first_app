@@ -1,0 +1,48 @@
+body {
+	font-family: serif;
+    background-color: #C0C0C0;
+    background-image: url(/assets/naglowek.png);
+    background-repeat: no-repeat;
+    background-position: top;
+	background-size: 100%;
+}
+
+.title {
+	color: lightblue;
+	position: relative;
+	left: 15%;
+	top: 50px;
+	font-size: 300%;
+}
+
+.menu {
+	position: relative;
+	width: 200px;
+	font-size: 150%;
+	color: black;
+	top: 300px;
+	height: 150px;
+}
+
+.tresc {
+	position: relative;
+	width: 87%;
+	min-height: 1000px;
+	font-size: 100%;
+	color: black;
+	left: 230px;
+	top: 150px;
+	background-color: lightblue;
+}
+
+center {
+	font-size: 200%;
+}
+
+li {
+    list-style-type: square;
+}
+
+.images {
+	text-align:center
+}

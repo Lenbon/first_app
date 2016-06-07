@@ -1,0 +1,124 @@
+﻿			a:hover{
+			color:red;
+	
+			}
+			a{
+				display:block;
+				font-family:cursive;
+				font-size: 14pt;
+				text-decoration:none;
+				margin: 0px 50% 0px 50%;
+			}
+			p{
+				
+				font-family:cursive;
+				
+				color:#b1a3fa;
+			}
+			h2{
+				font-family:sans-serif;
+				text-align:center;
+				letter-spacing: 2px;
+			}
+			form{
+				display:inline;
+			}
+			input[type="button"]{
+				cursor:pointer;
+				width:200px;
+				height:20px;
+				background-color:#F1F1F1;
+				border-radius: 5px;
+				border-top:none;
+				border-left:none;
+				border-color: #d7d7d7;
+			}
+			input[type="button"]:hover{
+				cursor:pointer;
+				width:200px;
+				height:20px;
+				background-color:#F1F1F1;
+				border-radius: 5px;
+				border-top:solid 2px;
+				border-left:solid 2px;
+				border-bottom:none;
+				border-right:none;
+				border-color: #d7d7d7;
+				padding-top:2px;
+				padding-left:4px;
+				padding-right:5px;
+				bottom:2px;
+				
+			}
+			table{
+				width:30%;
+				margin-top:100px;
+				margin-left:30%;
+				margin-right:50%;
+			}
+			table td{
+				border: solid 1px;
+				height:100px;
+				width:100px;
+				text-align:center;
+				font-family:Comic Sans MS;
+				font-size: 32px;
+			}
+			
+		
+			.leftcol{
+				width:10%;
+				display: inline-block;
+				margin-top:0px;
+				margin-left:0px;
+				margin-right:0px;
+			}
+			.maincol{
+				width:80%;
+				display: inline-block;
+				float:right;
+				
+			}
+			
+			.box{
+				width: 500px;
+				height:250px;
+				border-style: solid;
+				border-width: 1px;
+				margin-top:auto;
+				margin-left:20px;
+				margin-right:20px;
+				margin-bottom: auto;
+				padding:10px 10px 10px 10px;
+				display:inline-block;
+				border-radius: 20px;
+				box-shadow: 0px 5px 10px 3px black;
+				float:left;
+			}
+			.row{
+				height: 10px;
+				margin-left:15px;
+				margin-right:15px;
+				margin-bottom:5px;
+				margin: 0px 0px 15px 0px;
+				clear:left;
+			}
+			div.row input{
+				width:200px;
+				height: 20px;
+				margin: 0px;
+				padding: 0px;
+				border:1px solid #d7d7d7;
+			}
+			div.row label{
+				height: 20px;
+				width: 6em;
+				margin: 0 15px 0 15px;
+				display:block;
+				text-align: right;
+				float: left
+			}
+			div.box input[type="button"]{
+				float: right;
+				margin-top:10px;
+			}

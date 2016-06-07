@@ -1,0 +1,2 @@
+module AmvHelper
+end

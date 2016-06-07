@@ -1,0 +1,18 @@
+<div class="title">
+	<h1>Ani-Desu</h1>
+</div>
+<div class="menu">
+	<ul>
+		<li>Strona Glowna</li>
+		<li>Anime</li>
+		<li>AMV</li>
+		<li>Manga</li>
+		<li><%= link_to 'Wiadomosci', controller: 'articles' %></li>
+	</ul>
+</div>
+<div class="tresc">
+	<center>Witamy na naszej stronie internetowej</center>
+	<p>Tresc</p>
+	<div class="images"><img src="/assets/main1.jpg" alt="img"/></div>
+	<div class="images"><img src="/assets/main2.jpg" alt="img"/></div>
+</div>

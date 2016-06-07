@@ -1,0 +1,26 @@
+<div class="title">
+	<h1>Ani-Desu</h1>
+</div>
+<div class="menu">
+	<ul>
+		<li>Strona Glowna<%= link_to 'Strona Glowna', controller: 'main_page' %></li>
+		<li>Anime</li>
+		<li>AMV</li>
+		<li>Manga</li>
+		<li><%= link_to 'Wiadomosci', controller: 'articles' %></li>
+	</ul>
+</div>
+<div class="tresc">
+	<p>
+		<strong><%= @article.title %></strong>
+	</p>
+	
+	<center><img class="article_img" src="<%= @article.img_name %>" alt="img"/></center>
+ 
+	<p>
+		<%= @article.text %>
+	</p>
+ 
+	<%= link_to 'Edit', edit_article_path(@article) %> |
+	<%= link_to 'Back', articles_path %>
+</div>

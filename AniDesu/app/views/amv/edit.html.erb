@@ -1,0 +1,46 @@
+<div class="title">
+	<h1>Ani-Desu</h1>
+</div>
+<div class="menu">
+	<ul>
+		<li><%= link_to 'Strona Glowna', controller: 'main_page' %></li>
+		<li>Anime</li>
+		<li><%= link_to 'AMV', controller: 'amv' %></li>
+		<li>Manga</li>
+		<li><%= link_to 'Wiadomosci', controller: 'articles' %></li>
+	</ul>
+</div>
+<div class="tresc">
+	<h1>Edycja AMV</h1>
+	
+	<%= form_for @amv, method: :patch do |f| %>
+ 
+		<% if @amv.errors.any? %>
+			<div id="error_explanation">
+				<div>Nie mozna zapisac:<div>
+				<ul>
+					<% @amv.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+					<% end %>
+				</ul>
+			</div>
+		<% end %>
+ 
+		<p class="article_label">
+			<%= f.label :Nazwa %><br>
+			<%= f.text_field :title %>
+		</p>
+ 
+		<p class="article_label">
+			<%= f.label :link %><br>
+			<%= f.text_field :link %>
+		</p>
+ 
+		<p class="amvs_submit">
+			<%= f.submit %>
+		</p>
+ 
+	<% end %>
+ 
+	<%= link_to 'Back', amv_index_path %>
+</div>

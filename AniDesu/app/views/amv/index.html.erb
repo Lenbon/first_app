@@ -1,0 +1,73 @@
+<div class="title">
+	<h1>Ani-Desu</h1>
+</div>
+<div class="menu">
+	<ul>
+		<li><%= link_to 'Strona Glowna', controller: 'main_page' %></li>
+		<li>Anime</li>
+		<li><%= link_to 'AMV', controller: 'amv' %></li>
+		<li>Manga</li>
+		<li><%= link_to 'Wiadomosci', controller: 'articles' %></li>
+	</ul>
+</div>
+<div class="tresc">
+	<h1>AMV</h1>
+	<div><%= link_to 'New amv', new_amv_path %></div>
+	<button type="button" id="show_new_amv">Dodaj nowe AMV</button>
+	<div id="new_amv_form" style="display: none;">
+		<%= form_for @amv_new, remote: true, url: amv_index_path, method: :post do |f| %>
+ 
+			<% if @amv_new.errors.any? %>
+				<div id="error_explanation">
+					<div>Nie mozna zapisac:<div>
+					<ul>
+						<% @amv_new.errors.full_messages.each do |msg| %>
+						<li><%= msg %></li>
+						<% end %>
+					</ul>
+				</div>
+			<% end %>
+ 
+			<p class="article_label">
+				<%= f.label :Nazwa %><br>
+				<%= f.text_field :title %>
+			</p>
+ 
+			<p class="article_label">
+				<%= f.label :link %><br>
+				<%= f.text_field :link %>
+			</p>
+ 
+			<p class="submit">
+				<%= f.submit %>
+			</p>
+ 
+		<% end %>
+	</div>
+	<div id="amvs">
+		<%= render @amvs %>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var new_amv_form, amv_title, amv_link, show_new_amv;
+	
+	$(document).ready(function() {
+		show_new_amv = document.getElementById("show_new_amv");
+		new_amv_form = document.getElementById("new_amv_form");
+		amv_title = document.getElementById("amv_title");
+		amv_link = document.getElementById("amv_link");
+	});
+		
+	function newAmvOnClick() {
+		if (new_amv_form.style.display == "none") {
+			amv_title.value = '';
+			amv_link.value = '';
+			new_amv_form.style.display = "inline";
+			show_new_amv.innerHTML = "Ukryj forme dodawania nowego AMV";
+		} else {
+			new_amv_form.style.display = "none";
+			show_new_amv.innerHTML = "Dodaj nowe AMV";
+		}
+	}
+</script>
